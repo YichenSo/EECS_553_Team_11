@@ -1,0 +1,35 @@
+clear all
+close all
+clc
+fsize = 20;
+%%
+filename = 'bco_hopper.csv';
+bco  = readtable(filename);
+filename = 'depo_hopper.csv';
+depo = readtable(filename);
+filename = 'gailfo_hopper.csv';
+gailfo = readtable(filename);
+
+%%
+figure(1)
+hold on
+plot(depo.Epoch,depo.Inverse_Dynamic_MSE)
+plot(bco.Epoch,bco.Inverse_Dynamic_MSE)
+axis  tight
+grid on
+xlabel('Epoch', 'fontsize', fsize, 'Interpreter','latex')
+ylabel('Inverse Dynamic MSE', 'fontsize', fsize, 'Interpreter','latex')
+legend('DePo','BCO','fontsize', fsize, 'Interpreter', 'latex')
+title('Hopper','fontsize', fsize, 'Interpreter', 'latex')
+
+%% 
+figure(2)
+hold on
+plot(depo.Epoch,depo.EpochTime_s_)
+plot(bco.Epoch,bco.EpochTime_s_)
+axis  tight
+grid on
+xlabel('Epoch', 'fontsize', fsize, 'Interpreter','latex')
+ylabel('Inverse Dynamic MSE', 'fontsize', fsize, 'Interpreter','latex')
+legend('DePo','BCO','fontsize', fsize, 'Interpreter', 'latex')
+title('Hopper','fontsize', fsize, 'Interpreter', 'latex')

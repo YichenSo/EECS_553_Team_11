@@ -84,3 +84,16 @@ constants:
   env_specs:
     env_name: 'hopper'
     env_kwargs: {}
+
+  render: true
+  render_kwargs: {}
+  render_mode: rgb_array
+  num_eval_steps: 2000
+  max_path_length: 1000
+  no_terminal: false
+
+  video_path: './videos/'
+  img_path: './imgs/'
+  
+method: 'gail-lfo' # ['bco', 'gailfo', 'gailfo-dp', 'sl-lfo', 'gail-lfo']
+save_samples: false # true

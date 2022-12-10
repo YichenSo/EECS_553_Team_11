@@ -20,7 +20,7 @@ def save_image(video_frames, filedir, start_frame, format="png"):
         im = Image.fromarray(frame)
         d = ImageDraw.Draw(im)
         fnt = ImageFont.truetype(
-            "/NAS2020/Share/mhliu/liberation/LiberationSans-Regular.ttf", 40
+            "/home/theo-yifan/EECS553_Project/computer-modern/cmunti.ttf", 40
         )
 
         # draw text, half opacity

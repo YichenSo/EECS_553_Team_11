@@ -33,6 +33,7 @@ if __name__ == "__main__":
         "variants-for-" + exp_specs["meta_data"]["exp_name"],
         "variants-" + timestamp,
     )
+    print("Writing variants to", variants_dir)
     os.makedirs(variants_dir)
     with open(os.path.join(variants_dir, "exp_spec_definition.yaml"), "w") as f:
         yaml.dump(exp_specs, f, default_flow_style=False)
